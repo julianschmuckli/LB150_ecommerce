@@ -3,6 +3,7 @@ import { themeSettings, text } from '../../lib/settings';
 import CheckoutStepContacts from './stepContacts';
 import CheckoutStepShipping from './stepShipping';
 import CheckoutStepPayment from './stepPayment';
+import CheckoutStepCoupon from './stepCoupon';
 
 export default class CheckoutForm extends React.Component {
 	constructor(props) {
@@ -184,6 +185,13 @@ export default class CheckoutForm extends React.Component {
 						onSave={this.handleShippingSave}
 						onEdit={this.handleShippingEdit}
 						onSubmit={this.handleShippingSubmit}
+					/>
+
+					<CheckoutStepCoupon
+						show={step >= 3}
+						title="Coupon"
+						buttonClassName={checkoutButtonClass}
+						inputClassName={checkoutInputClass}
 					/>
 
 					{showPaymentForm && (

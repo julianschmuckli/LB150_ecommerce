@@ -106,6 +106,10 @@ const OrderSummary = props => {
 					<div className="column is-5 has-text-right price">
 						{helper.formatCurrency(cart.shipping_total, settings)}
 					</div>
+					<div className="column is-7">Coupon</div>
+					<div className="column is-5 has-text-right price">
+						{helper.formatCurrency(cart.coupon_total, settings)}
+					</div>
 
 					{cart.discount_total > 0 && (
 						<div className="column is-7">{text.discount}</div>
