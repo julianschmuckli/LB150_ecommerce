@@ -18,7 +18,9 @@ const getFieldLabel = field => {
 function saveCoupon() {
 	var value = document.getElementById('coupon.code').value;
 
-	if (value == 'test') {
+	if (value == 'Test123') {
+		alert('Coupon Code valid');
+		document.getElementById('coupon.code').disabled = 'disabled';
 	}
 }
 
